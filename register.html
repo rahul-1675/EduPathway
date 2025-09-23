@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - EduPathway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="logo-brand">
+            <span>🎓</span> 
+            <h1>EduPathway</h1>
+        </div>
+        <p class="auth-subtitle">Create an account to start planning.</p>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+             <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+            <p id="registerError" class="error-message"></p>
+            <button type="submit" class="modal-button add-button">Create Account</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

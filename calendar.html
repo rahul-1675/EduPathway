@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - EduPathway</title>
+    <script src="auth.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-brand">
+                <span>🎓</span>
+                <span class="logo-text">EduPathway</span>
+            </div>
+            <button class="close-sidebar-btn">&times;</button>
+        </div>
+        <nav class="nav-menu">
+            <a href="dashboard.html"><span>🏠</span><span class="link-text">Dashboard</span></a>
+            <a href="tasks.html"><span>✔️</span><span class="link-text">Tasks</span></a>
+            <a href="goals.html"><span>🎯</span><span class="link-text">Goals</span></a>
+            <a href="calendar.html" class="active"><span>📅</span><span class="link-text">Calendar</span></a>
+        </nav>
+        <a href="#" id="logoutBtn" class="nav-menu-logout"><span>↩️</span><span class="link-text">Logout</span></a>
+    </aside>
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="open-sidebar-btn">☰</button>
+                    <div>
+                        <h1>Study Calendar</h1>
+                        <p class="header-meta">View your study schedule and upcoming deadlines.</p>
+                    </div>
+                </div>
+            </header>
+            <div class="content-card">
+                <div class="calendar-header">
+                    <button id="prevMonthBtn" class="calendar-nav-btn">&lt;</button>
+                    <h2 id="monthYearDisplay"></h2>
+                    <button id="nextMonthBtn" class="calendar-nav-btn">&gt;</button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                </div>
+                <div id="calendarGrid" class="calendar-grid"></div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

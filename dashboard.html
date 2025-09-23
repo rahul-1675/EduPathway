@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EduPathway</title>
+    <script src="auth.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-brand">
+                <span>🎓</span> 
+                <span class="logo-text">EduPathway</span>
+            </div>
+            <button class="close-sidebar-btn">&times;</button>
+        </div>
+        <nav class="nav-menu">
+            <a href="dashboard.html" class="active"><span>🏠</span><span class="link-text">Dashboard</span></a>
+            <a href="tasks.html"><span>✔️</span><span class="link-text">Tasks</span></a>
+            <a href="goals.html"><span>🎯</span><span class="link-text">Goals</span></a>
+            <a href="calendar.html"><span>📅</span><span class="link-text">Calendar</span></a>
+        </nav>
+        <a href="#" id="logoutBtn" class="nav-menu-logout"><span>↩️</span><span class="link-text">Logout</span></a>
+    </aside>
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="open-sidebar-btn">☰</button>
+                    <div>
+                        <h1>Study Dashboard</h1>
+                        <p class="header-meta">Welcome back! Here's your academic progress overview.</p>
+                    </div>
+                </div>
+                <div id="headerDate" class="header-date">
+                    <span>📅</span>
+                    <span id="dateText"></span>
+                </div>
+            </header>
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="icon-container blue">📚</div>
+                    <div class="stat-info">
+                        <h3>Total Tasks</h3>
+                        <p id="totalTasksStat" class="value">0</p>
+                        <p id="completedTasksStat" class="detail">+0 completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon-container green">🎯</div>
+                    <div class="stat-info">
+                        <h3>Active Goals</h3>
+                        <p id="activeGoalsStat" class="value">0</p>
+                        <p class="detail">in progress</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon-container purple">🕒</div>
+                    <div class="stat-info">
+                        <h3>Study Hours</h3>
+                        <p id="studyHoursStat" class="value">0</p>
+                        <p class="detail">Estimated</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon-container yellow">🏆</div>
+                    <div class="stat-info">
+                        <h3>Average Grade</h3>
+                        <p id="averageGradeStat" class="value">N/A</p>
+                        <p id="gradeDetailStat" class="detail">Improving</p>
+                    </div>
+                </div>
+            </section>
+            <section class="dashboard-main-grid">
+                <div id="upcomingTasksCard" class="content-card">
+                    <div class="content-card-header"><span class="icon">🔔</span><h2>Upcoming Tasks</h2></div>
+                    <div id="upcomingTasksContainer"></div>
+                </div>
+                <div id="dashboardGoalsContainer" class="content-card"></div>
+            </section>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

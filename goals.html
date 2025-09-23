@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal Tracker - EduPathway</title>
+    <script src="auth.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-brand">
+                <span>🎓</span>
+                <span class="logo-text">EduPathway</span>
+            </div>
+            <button class="close-sidebar-btn">&times;</button>
+        </div>
+        <nav class="nav-menu">
+            <a href="dashboard.html"><span>🏠</span><span class="link-text">Dashboard</span></a>
+            <a href="tasks.html"><span>✔️</span><span class="link-text">Tasks</span></a>
+            <a href="goals.html" class="active"><span>🎯</span><span class="link-text">Goals</span></a>
+            <a href="calendar.html"><span>📅</span><span class="link-text">Calendar</span></a>
+        </nav>
+        <a href="#" id="logoutBtn" class="nav-menu-logout"><span>↩️</span><span class="link-text">Logout</span></a>
+    </aside>
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <header class="header">
+                <div class="header-left">
+                    <button class="open-sidebar-btn">☰</button>
+                    <div>
+                        <h1>Goal Tracker</h1>
+                        <p class="header-meta">Set, track, and achieve your academic goals with milestones.</p>
+                    </div>
+                </div>
+                <button id="addGoalBtn" class="add-button green">+ Add Goal</button>
+            </header>
+            <section class="stats-grid">
+                <div class="stat-card total-goals">
+                    <div class="icon-container">🎯</div>
+                    <div class="stat-info">
+                        <h3>Total Goals</h3>
+                        <p id="totalGoalsStat" class="value">0</p>
+                    </div>
+                </div>
+                <div class="stat-card completed-goals">
+                    <div class="icon-container">✅</div>
+                    <div class="stat-info">
+                        <h3>Completed</h3>
+                        <p id="completedGoalsStat" class="value">0</p>
+                    </div>
+                </div>
+                <div class="stat-card avg-progress">
+                    <div class="icon-container">📈</div>
+                    <div class="stat-info">
+                        <h3>Avg Progress</h3>
+                        <p id="avgProgressStat" class="value">0%</p>
+                    </div>
+                </div>
+            </section>
+            <section id="goalListContainer" class="goal-list"></section>
+        </div>
+    </div>
+    <div id="addGoalModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Goal</h2>
+                <button id="closeGoalModalBtn" class="close-button">&times;</button>
+            </div>
+            <form id="addGoalForm">
+                <div class="form-group">
+                    <label for="goalTitle">Goal Title</label>
+                    <input type="text" id="goalTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="goalDescription">Description</label>
+                    <textarea id="goalDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="goalDeadline">Deadline</label>
+                    <input type="date" id="goalDeadline" required>
+                </div>
+                <div class="form-group">
+                    <label>Estimated Time</label>
+                    <div class="time-input-group">
+                        <input type="number" id="goalTimeValue" required>
+                        <select id="goalTimeUnit">
+                            <option value="hours">Hours</option>
+                            <option value="minutes">Minutes</option>
+                            <option value="seconds">Seconds</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="goalMilestones">Milestones (comma-separated)</label>
+                    <input type="text" id="goalMilestones" required>
+                </div>
+                <button type="submit" class="modal-button add-button green">Create Goal</button>
+            </form>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
