@@ -80,4 +80,4 @@ This project is currently under **MIT License** *(or whichever you prefer)*.
 ## Contact
 Created by Rahul – feel free to reach out for feedback, questions, or collaborations.
 - GitHub: [rahul-1675](https://github.com/rahul-1675/)
-- Email: *your-email@example.com*
+- Email: bhavanamrahul16@gmail.com
